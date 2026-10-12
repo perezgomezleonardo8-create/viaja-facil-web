@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viaja Fácil Web | Inicio</title>
+    <link rel="stylesheet" href="../public/css/styles.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">🧳 Viaja Fácil Web</div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Paquetes</a></li>
+                <li><a href="#">Transporte</a></li>
+                <li><a href="#">Destinos</a></li>
+                <li><a href="#">Mi Cuenta</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-search">
+        <div class="search-container">
+            <h2>Planifica tu viaje de forma centralizada</h2>
+            
+            <div class="search-tabs">
+                <button class="tab-btn active" onclick="switchTab('vuelos')">✈️ Vuelos</button>
+                <button class="tab-btn" onclick="switchTab('autobuses')">🚌 Autobuses</button>
+                <button class="tab-btn" onclick="switchTab('traslados')">🚗 Traslados</button>
+            </div>
+
+            <form class="search-form" onsubmit="event.preventDefault(); alert('Buscando tarifas disponibles...');">
+                <div class="input-group">
+                    <label>Origen</label>
+                    <input type="text" placeholder="¿Desde qué aeropuerto sales?" required>
+                </div>
+                <div class="input-group">
+                    <label>Destino</label>
+                    <input type="text" placeholder="¿A dónde vas?" required>
+                </div>
+                <div class="input-group">
+                    <label>Fecha</label>
+                    <input type="date" required>
+                </div>
+                <button type="submit" class="btn-search">Buscar Tarifas</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="packages-section">
+        <h3>🌟 Paquetes Turísticos Populares</h3>
+        <div id="packages-grid" class="packages-grid"></div>
+    </section>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Viaja Fácil Web - Facultad de Contaduría y Administración C-I (UNACH)</p>
+    </footer>
+
+    <script src="../models/PackageModel.js"></script>
+    <script src="../public/js/main.js"></script>
+    <script src="../controllers/HomeController.js"></script>
+</body>
+</html>
